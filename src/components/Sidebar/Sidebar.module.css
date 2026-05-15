@@ -1,0 +1,113 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+/* ── Header ── */
+.header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--color-border-light);
+  background: var(--color-surface);
+  flex-shrink: 0;
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.globe {
+  font-size: 32px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.tripInfo {
+  min-width: 0;
+}
+
+.tripTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.02em;
+  cursor: text;
+}
+
+.tripTitle:hover {
+  color: var(--color-accent);
+}
+
+.titleInput {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  border: none;
+  border-bottom: 2px solid var(--color-accent);
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 0;
+}
+
+.tripDates {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+  font-weight: 400;
+}
+
+/* ── Timeline scroll area ── */
+.timelineArea {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Footer ── */
+.footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 11px 0;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.addBtn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.addBtn:active {
+  transform: translateY(0);
+}
+
+.addIcon {
+  font-size: 18px;
+  line-height: 1;
+  margin-top: -1px;
+}

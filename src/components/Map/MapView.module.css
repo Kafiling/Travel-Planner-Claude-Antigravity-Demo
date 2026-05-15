@@ -1,0 +1,37 @@
+.mapWrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  min-width: 150px;
+}
+
+.popupTime {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.popupTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.popupLoc {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}

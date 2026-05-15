@@ -1,0 +1,171 @@
+.timeline {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Event Card ── */
+.card {
+  display: flex;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover,
+.card.hovered {
+  border-color: var(--event-color);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transform: translateX(2px);
+}
+
+.card.active {
+  border-color: var(--event-color);
+  background: color-mix(in srgb, var(--event-color) 5%, white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.cardAccent {
+  width: 4px;
+  background: var(--event-color);
+  flex-shrink: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.cardContent {
+  padding: 10px 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.cardEmoji {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardType {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--event-color);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cardTime {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.removeBtn {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+.card:hover .removeBtn {
+  opacity: 1;
+}
+
+.removeBtn:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardLocation {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Travel Segment ── */
+.segment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0 6px 20px;
+}
+
+.segmentLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.segmentInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 99px;
+  padding: 3px 10px;
+  flex-shrink: 0;
+}
+
+.segmentIcon {
+  font-size: 12px;
+}
+
+.segmentText {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* ── Empty state ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.emptyIcon {
+  font-size: 40px;
+  margin-bottom: 4px;
+}
